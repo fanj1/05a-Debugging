@@ -7,14 +7,14 @@ and on TypeError exceptions, in particular those of the form:
   'BLAHType' object is not callable.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jun Fan.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
 ########################################################################
 #
-# TODO: 2. READ these instructions, ASKING QUESTIONS as needed.
+# DONE: 2. READ these instructions, ASKING QUESTIONS as needed.
 #
 #   This module contains "broken" functions, as in m1.py.
 #   FOLLOW THE SAME STEPS as in the instructions of m1.py
@@ -54,16 +54,16 @@ def main():
 ########################################################################
 def run_test_all():
     """ Tests ALL the functions in this module. """
-    # Test broken_1:
-    window = rg.RoseWindow(title='Testing BROKEN_1')
-    circle1 = rg.Circle(rg.Point(50, 50), 15)
-    circle1.fill_color = 'blue'
-    broken_1(circle1, window)  # Test 1 of broken_1
-
-    circle2 = rg.Circle(rg.Point(70, 150), 30)
-    circle2.fill_color = 'red'
-    broken_1(circle2, window)  # Test 2 of broken_1
-    window.close_on_mouse_click()
+    # # Test broken_1:
+    # window = rg.RoseWindow(title='Testing BROKEN_1')
+    # circle1 = rg.Circle(rg.Point(50, 50), 15)
+    # circle1.fill_color = 'blue'
+    # broken_1(circle1, window)  # Test 1 of broken_1
+    #
+    # circle2 = rg.Circle(rg.Point(70, 150), 30)
+    # circle2.fill_color = 'red'
+    # broken_1(circle2, window)  # Test 2 of broken_1
+    # window.close_on_mouse_click()
 
     # Test broken_2:
     window = rg.RoseWindow(title='Testing BROKEN_2')
@@ -110,7 +110,7 @@ def run_test_all():
 
 
 # ----------------------------------------------------------------------
-# TODO: 3. Follow the INSTRUCTIONS AT THE TOP OF THIS MODULE
+# DONE: 3. Follow the INSTRUCTIONS AT THE TOP OF THIS MODULE
 #          to correct the mistake(s) in the following function.
 # ----------------------------------------------------------------------
 def broken_1(circle, window):
@@ -129,14 +129,14 @@ def broken_1(circle, window):
       :type circle: rg.Circle
       :type window: rg.RoseWindow
     """
-    circle.attach(window)
-    circle2 = rg.Circle(circle.center(), 2 * circle.r)
-    circle2.attach(circle)
-    circle2.render()
+    circle.attach_to(window)
+    circle2 = rg.Circle(circle.center, 2 * circle.radius)
+    circle2.attach_to(window)
+    window.render()
 
 
 # ----------------------------------------------------------------------
-# TODO: 4. Follow the INSTRUCTIONS AT THE TOP OF THIS MODULE
+# DONE: 4. Follow the INSTRUCTIONS AT THE TOP OF THIS MODULE
 #          to correct the mistake(s) in the following function.
 # ----------------------------------------------------------------------
 def broken_2(x, y, window):

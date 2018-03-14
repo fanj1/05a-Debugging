@@ -93,44 +93,44 @@ def main():
 def run_test_all():
     """ Tests ALL the functions in this module. """
     # # Test broken_1:
-    # window = rg.RoseWindow(title='Testing BROKEN_1')
-    # circle1 = rg.Circle(rg.Point(50, 50), 15)
-    # circle1.fill_color = 'blue'
-    # broken_1(circle1, window)  # Test 1 of broken_1
-    #
-    # circle2 = rg.Circle(rg.Point(70, 150), 30)
-    # circle2.fill_color = 'red'
-    # broken_1(circle2, window)  # Test 2 of broken_1
-    # window.close_on_mouse_click()
+    window = rg.RoseWindow(title='Testing BROKEN_1')
+    circle1 = rg.Circle(rg.Point(50, 50), 15)
+    circle1.fill_color = 'blue'
+    broken_1(circle1, window)  # Test 1 of broken_1
+
+    circle2 = rg.Circle(rg.Point(70, 150), 30)
+    circle2.fill_color = 'red'
+    broken_1(circle2, window)  # Test 2 of broken_1
+    window.close_on_mouse_click()
 
     # # Test broken_2:
-    # window = rg.RoseWindow(title='Testing BROKEN_2')
-    # broken_2(50, 75, window)  # Test 1 of broken_2
-    # broken_2(100, 150, window)  # Test 2 of broken_2
-    # window.close_on_mouse_click()
+    window = rg.RoseWindow(title='Testing BROKEN_2')
+    broken_2(50, 75, window)  # Test 1 of broken_2
+    broken_2(100, 150, window)  # Test 2 of broken_2
+    window.close_on_mouse_click()
 
     # Test broken_3:
-    # window = rg.RoseWindow(title='Testing BROKEN_3')
-    # broken_3(5, rg.Point(100, 50), 80, 20, window)  # Test 1 of broken_3
-    # broken_3(3, rg.Point(50, 150), 40, 50, window)  # Test 2 of broken_3
-    # window.close_on_mouse_click()
+    window = rg.RoseWindow(title='Testing BROKEN_3')
+    broken_3(5, rg.Point(100, 50), 80, 20, window)  # Test 1 of broken_3
+    broken_3(3, rg.Point(50, 150), 40, 50, window)  # Test 2 of broken_3
+    window.close_on_mouse_click()
 
     # Test broken_4:
-    # window = rg.RoseWindow(title='Testing BROKEN_4')
-    # broken_4(50, 75, 40, window)  # Test 1 of broken_4
-    # broken_4(100, 150, 75, window)  # Test 2 of broken_4
-    # window.close_on_mouse_click()
+    window = rg.RoseWindow(title='Testing BROKEN_4')
+    broken_4(50, 75, 40, window)  # Test 1 of broken_4
+    broken_4(100, 150, 75, window)  # Test 2 of broken_4
+    window.close_on_mouse_click()
     #
     # # Test broken_5:
-    # window = rg.RoseWindow(title='Testing BROKEN_5')
-    # circle = rg.Circle(rg.Point(100, 50), 30)
-    # circle.fill_color = 'pink'
-    # broken_5(circle, window)  # Test 1 of broken_5
-    #
-    # circle = rg.Circle(rg.Point(250, 100), 80)
-    # circle.fill_color = 'red'
-    # broken_5(circle, window)  # Test 2 of broken_5
-    # window.close_on_mouse_click()
+    window = rg.RoseWindow(title='Testing BROKEN_5')
+    circle = rg.Circle(rg.Point(100, 50), 30)
+    circle.fill_color = 'pink'
+    broken_5(circle, window)  # Test 1 of broken_5
+
+    circle = rg.Circle(rg.Point(250, 100), 80)
+    circle.fill_color = 'red'
+    broken_5(circle, window)  # Test 2 of broken_5
+    window.close_on_mouse_click()
 
     # Test broken_6:
     expected = 1.8333333
