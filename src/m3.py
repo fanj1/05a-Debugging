@@ -5,13 +5,13 @@ That is, no run-time exception occurs, but the function simply
 does not do the right thing.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jun Fan.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 ########################################################################
 #
-# TODO: 2. READ these instructions, ASKING QUESTIONS as needed.
+# DONE: 2. READ these instructions, ASKING QUESTIONS as needed.
 #
 #   This module contains "broken" functions, as in m1 and m2.
 #   FOLLOW THE SAME STEPS as in the instructions of m1.py
@@ -39,9 +39,10 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 ########################################################################
 
-def main():
-    """ Calls the   TEST   functions in this module. """
 
+def main():
+    run_test_broken_1()
+    """ Calls the   TEST   functions in this module. """
 
 ########################################################################
 # Students:
@@ -51,6 +52,8 @@ def main():
 #   Instead, ** CALL ** this function as needed in the problems below.
 #   There are NO errors in this  is_prime  function.
 ########################################################################
+
+
 def is_prime(n):
     """
     What comes in:  An integer n >= 2.
@@ -75,6 +78,8 @@ def is_prime(n):
 # Students: Do NOT change any of the TEST functions.
 #           There are NO errors in the TESTS.
 ########################################################################
+
+
 def run_test_broken_1():
     """ Tests the  broken_1  function. """
     print()
@@ -99,7 +104,7 @@ def run_test_broken_1():
 
 
 # ----------------------------------------------------------------------
-# TODO: 3. Follow the INSTRUCTIONS AT THE TOP OF THIS MODULE
+# DONE: 3. Follow the INSTRUCTIONS AT THE TOP OF THIS MODULE
 #          to correct the mistake(s) in the following function.
 # ----------------------------------------------------------------------
 def broken_1(m):
@@ -121,12 +126,14 @@ def broken_1(m):
     #    **  For full credit you must appropriately
     #    **  use (call) the   is_prime   function that is DEFINED ABOVE.
     count = 0
-    for k in range(2 * m):
-        if is_prime(m):
+    for k in range(m + 2):
+        if is_prime(k + m):
             count = count + 1
+    return count
 
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
-    main()
+
+main()
